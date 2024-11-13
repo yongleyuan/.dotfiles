@@ -115,6 +115,7 @@ bindkey \^U backward-kill-line
 export PATH="/Users/jack/nvim/bin:$PATH" # nvim
 export PATH="/opt/homebrew/bin:$PATH" # brew
 export PATH="/Users/jack/.local/bin:$PATH" # distant
+export EDITOR="nvim"
 
 # Aliases
 alias "vim"="nvim"
