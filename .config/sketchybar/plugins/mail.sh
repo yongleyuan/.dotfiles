@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-MAILINFO=$(lsappinfo info -only StatusLabel `lsappinfo find LSDisplayName=Mail`)
-COUNT=$(echo $MAILINFO | awk -F '\"' '{print $6}')
+COUNT=$($HOME/.config/sketchybar/scripts/notification.sh Mail)
 THRES=1
 
 if [[ $COUNT -lt $THRES ]]; then

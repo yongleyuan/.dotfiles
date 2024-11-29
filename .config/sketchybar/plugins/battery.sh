@@ -8,22 +8,32 @@ if [ "$PERCENTAGE" = "" ]; then
 fi
 
 case "${PERCENTAGE}" in
-  9[0-9]|100) ICON="" COLOR=
-  ;;
-  [6-8][0-9]) ICON=""
-  ;;
-  [3-5][0-9]) ICON=""
-  ;;
-  [1-2][0-9]) ICON=""
-  ;;
-  *) ICON=""
+  100) ICON="󰁹" COLOR="0xff6abd43"
+    ;;
+  9[0-9]) ICON="󰂂" COLOR="0xff6abd43"
+    ;;
+  8[0-9]) ICON="󰂁" COLOR="0xffafd235"
+    ;;
+  7[0-9]) ICON="󰂀" COLOR="0xffafd235"
+    ;;
+  6[0-9]) ICON="󰁿" COLOR="0xffafd235"
+    ;;
+  5[0-9]) ICON="󰁾" COLOR="0xffafd235"
+    ;;
+  4[0-9]) ICON="󰁽" COLOR="0xfff7941c"
+    ;;
+  3[0-9]) ICON="󰁼" COLOR="0xfff7941c"
+    ;;
+  2[0-9]) ICON="󰁻" COLOR="0xfff7941c"
+    ;;
+  1[0-9]) ICON="󰁺" COLOR="0xfff7941c"
+    ;;
+  *) ICON="󰂎" COLOR="0xffed1b25"
 esac
 
 if [[ "$CHARGING" != "" ]]; then
-  ICON=""
+  ICON="󱐋$ICON"
 fi
 
-# The item invoking this script (name $NAME) will get its icon and label
-# updated with the current battery status
-$BAR_NAME --set "$NAME" icon="$ICON" label="${PERCENTAGE}%"
+$BAR_NAME --set "$NAME" icon="$ICON" icon.color="$COLOR" label="${PERCENTAGE}%"
 
