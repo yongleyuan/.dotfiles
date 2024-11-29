@@ -11,6 +11,11 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PATH="/Users/jack/nvim/bin:$PATH" # nvim
+export PATH="/opt/homebrew/bin:$PATH" # brew
+export EDITOR="nvim"
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -112,11 +117,6 @@ unset __conda_setup
 
 bindkey \^U backward-kill-line
 
-export PATH="/Users/jack/nvim/bin:$PATH" # nvim
-export PATH="/opt/homebrew/bin:$PATH" # brew
-export PATH="/Users/jack/.local/bin:$PATH" # distant
-export EDITOR="nvim"
-
 # Aliases
 alias "vim"="nvim"
 alias "ls"="eza"
@@ -124,6 +124,7 @@ alias "cdn"="cd ~/.dotfiles/.config/nvim/"
 alias "cdo"="cd /Users/jack/Library/Mobile\ Documents/iCloud~md~obsidian/Documents"
 alias "cdt"="cd ~/.dotfiles/.config/tmux/"
 alias "cdd"="cd ~/.dotfiles/"
+alias "tt"="taskwarrior-tui"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -145,3 +146,4 @@ function fcd() {
     dir=$(find ${1:-.} -type d -not -path '*/\.*' 2> /dev/null | fzf +m) && cd "$dir"
 }
 
+eval "$(zoxide init zsh)"

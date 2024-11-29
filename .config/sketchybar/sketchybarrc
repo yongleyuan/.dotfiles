@@ -1,0 +1,66 @@
+CONFIG_DIR="$HOME/.config/$BAR_NAME"
+ITEM_DIR="$CONFIG_DIR/items"
+SCRIPT_DIR="$CONFIG_DIR/scripts"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+# Bar default config
+source "$SCRIPT_DIR/colors.sh"
+source "$SCRIPT_DIR/load_default_config.sh"
+$BAR_NAME --bar position=top height=36 blur_radius=30 color="0xaf$BASE"
+
+# -- LEFT --
+
+# Aerospace workspace
+source $ITEM_DIR/aerospace.sh
+
+# Front app
+$BAR_NAME --add item front_app left
+source "$ITEM_DIR/front_app.sh"
+
+# -- NOTCH LEFT --
+
+# Date
+$BAR_NAME --add item date_notch q
+$BAR_NAME --add item date q
+source "$ITEM_DIR/date.sh"
+
+# Volume
+$BAR_NAME --add item volume q
+source "$ITEM_DIR/volume.sh"
+
+# -- NOTCH RIGHT --
+
+# Time
+$BAR_NAME --add item time_notch e
+$BAR_NAME --add item time e
+source "$ITEM_DIR/time.sh"
+
+# Battery
+$BAR_NAME --add item battery e
+source "$ITEM_DIR/battery.sh"
+
+# -- RIGHT --
+
+# CPU and RAM
+$BAR_NAME -m --add item cpu_percent right
+$BAR_NAME -m --add item ram_percent right
+$BAR_NAME -m --add item cpu_label right
+$BAR_NAME -m --add item ram_label right
+source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/ram.sh"
+
+# Wechat
+$BAR_NAME --add item wechat right
+source "$ITEM_DIR/wechat.sh"
+
+# Mail
+$BAR_NAME --add item mail right
+source "$ITEM_DIR/mail.sh"
+
+# Taskwarrior
+$BAR_NAME --add item taskwarrior right
+source "$ITEM_DIR/taskwarrior.sh"
+
+##### Force all scripts to run the first time (never do this in a script) #####
+$BAR_NAME --update
+
