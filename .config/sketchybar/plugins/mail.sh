@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COUNT=$($HOME/.config/sketchybar/scripts/notification.sh Mail)
+COUNT=$($HOME/.config/$BAR_NAME/scripts/notification.sh Mail)
 THRES=1
 
 if [[ $COUNT -lt $THRES ]]; then

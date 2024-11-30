@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-COUNT=$($HOME/.config/sketchybar/scripts/notification.sh 微信)
+COUNT=$($HOME/.config/$BAR_NAME/scripts/notification.sh 微信)
+THRES=1
 
 if [[ $COUNT -lt $THRES ]]; then
   $BAR_NAME --set $NAME label.drawing=off icon.padding_right=8

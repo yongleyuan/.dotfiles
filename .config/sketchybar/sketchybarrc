@@ -8,10 +8,16 @@ source "$SCRIPT_DIR/colors.sh"
 source "$SCRIPT_DIR/load_default_config.sh"
 $BAR_NAME --bar position=top height=36 blur_radius=30 color="0xaf$BASE"
 
+# Register events
+$BAR_NAME --add event aerospace_workspace_change
+
 # -- LEFT --
 
 # Aerospace workspace
 source $ITEM_DIR/aerospace.sh
+
+# Space apps
+source "$ITEM_DIR/space_apps.sh"
 
 # Front app
 $BAR_NAME --add item front_app left
@@ -60,6 +66,14 @@ source "$ITEM_DIR/battery.sh"
 # Volume
 $BAR_NAME --add item volume right
 source "$ITEM_DIR/volume.sh"
+
+# Headphone
+$BAR_NAME --add item headphone right
+source "$ITEM_DIR/headphone.sh"
+
+# Wifi
+$BAR_NAME --add item wifi right
+source "$ITEM_DIR/wifi.sh"
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 $BAR_NAME --update

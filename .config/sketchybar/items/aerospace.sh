@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-$BAR_NAME --add event aerospace_workspace_change
-
 $BAR_NAME --add item aerospace.label left \
 	  --set aerospace.label \
                 icon="" \
@@ -9,7 +7,8 @@ $BAR_NAME --add item aerospace.label left \
                 icon.color="0xff$LAVENDER" \
                 label.drawing=off
 
-for sid in $(aerospace list-workspaces --all); do
+sids1=("I" "O" "P" "U" "Y")
+for sid in ${sids1[@]}; do
   $BAR_NAME --add item aerospace.$sid left \
             --subscribe aerospace.$sid aerospace_workspace_change \
             --set aerospace.$sid \
@@ -19,7 +18,27 @@ for sid in $(aerospace list-workspaces --all); do
                   label="$sid" \
                   label.padding_left=8 \
                   label.padding_right=8 \
-                  label.highlight_color="0xff$LAVENDER" \
+                  label.color="0xff$LAVENDER" \
+                  label.highlight_color="0xffffffff" \
+                  display=1 \
+                  click_script="aerospace workspace $sid" \
+                  script="$PLUGIN_DIR/aerospace.sh $sid"
+done
+
+sids2=("1" "2" "3" "4" "5")
+for sid in ${sids2[@]}; do
+  $BAR_NAME --add item aerospace.$sid left \
+            --subscribe aerospace.$sid aerospace_workspace_change \
+            --set aerospace.$sid \
+                  icon.drawing=off \
+                  padding_left=4 \
+                  padding_right=4 \
+                  label="$sid" \
+                  label.padding_left=8 \
+                  label.padding_right=8 \
+                  label.color="0xff$LAVENDER" \
+                  label.highlight_color="0xffffffff" \
+                  display=2 \
                   click_script="aerospace workspace $sid" \
                   script="$PLUGIN_DIR/aerospace.sh $sid"
 done
