@@ -12,6 +12,7 @@ for sid in ${sids1[@]}; do
   $BAR_NAME --add item aerospace.$sid left \
             --subscribe aerospace.$sid aerospace_workspace_change \
             --set aerospace.$sid \
+                  background.padding_right=10 \
                   icon.drawing=off \
                   padding_left=4 \
                   padding_right=4 \
@@ -30,6 +31,7 @@ for sid in ${sids2[@]}; do
   $BAR_NAME --add item aerospace.$sid left \
             --subscribe aerospace.$sid aerospace_workspace_change \
             --set aerospace.$sid \
+                  background.padding_right=10 \
                   icon.drawing=off \
                   padding_left=4 \
                   padding_right=4 \
