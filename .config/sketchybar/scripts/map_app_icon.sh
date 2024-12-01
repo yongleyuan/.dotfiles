@@ -88,6 +88,9 @@ case "$1" in
   "com.apple.PhotoBooth")
     ICON=""
     ;;
+  "com.apple.Music")
+    ICON=""
+    ;;
   *)
     ICON="󰣆"
     ;;
