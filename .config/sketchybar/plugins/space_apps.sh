@@ -15,7 +15,7 @@ else
         APP=${APPS[i]}
         LABELS+="$($HOME/.config/$BAR_NAME/scripts/map_app_icon.sh $APP)"
         if [[ $i < $(($LENGTH - 1)) ]]; then
-            LABELS+=" "
+            LABELS+="  "
         fi
     done
 fi
