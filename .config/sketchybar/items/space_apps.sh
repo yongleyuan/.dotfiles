@@ -17,5 +17,4 @@ $BAR_NAME --add item space_apps left \
                 label.padding_right=5 \
                 label.color="0xff$TEXT" \
                 label.drawing=off \
-                display=$(aerospace list-monitors --focused --format %{monitor-appkit-nsscreen-screens-id})
 
