@@ -5,8 +5,6 @@ $BAR_NAME --subscribe front_app front_app_switched \
                 icon="" \
                 icon.color="0xff$TEXT" \
                 icon.font.size=14 \
-                icon.padding_right=14 \
-                padding_left=0 \
-                background.padding_left=0 \
-                script="$PLUGIN_DIR/front_app.sh" \
+                padding_left=12 \
+                script="$PLUGIN_DIR/front_app.sh"
 

@@ -132,9 +132,9 @@ if.during-aerospace-startup = false
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.mail'
+check-further-callbacks = true
 if.during-aerospace-startup = true
-run = ['move-node-to-workspace I']
+run = ['layout tiling', 'move-node-to-workspace I']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'

@@ -16,9 +16,6 @@ $BAR_NAME --add event aerospace_workspace_change
 # Aerospace workspace
 source $ITEM_DIR/aerospace.sh
 
-# Space apps
-source "$ITEM_DIR/space_apps.sh"
-
 # Front app
 $BAR_NAME --add item front_app left
 source "$ITEM_DIR/front_app.sh"
