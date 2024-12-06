@@ -7,7 +7,7 @@ $BAR_NAME --add item aerospace.label left \
                 icon.color="0xff$LAVENDER" \
                 label.drawing=off
 
-sids1=("I" "O" "P" "U" "Y")
+sids1=("Y" "U" "I" "O" "P")
 for sid in ${sids1[@]}; do
   $BAR_NAME --add item aerospace.$sid left \
             --subscribe aerospace.$sid aerospace_workspace_change \
