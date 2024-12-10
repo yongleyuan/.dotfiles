@@ -80,7 +80,6 @@ plugins=(
     copypath \
     copyfile \
     pip \
-    sudo \
 )
 
 source $ZSH/oh-my-zsh.sh
