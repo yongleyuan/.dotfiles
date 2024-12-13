@@ -60,8 +60,8 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-alt-minus = 'resize smart -10'
-alt-equal = 'resize smart +10'
+alt-minus = 'resize smart -50'
+alt-equal = 'resize smart +50'
 
 alt-y = 'workspace Y'
 alt-u = 'workspace U'
@@ -139,9 +139,11 @@ run = ['layout tiling', 'move-node-to-workspace I']
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 if.during-aerospace-startup = true
+check-further-callbacks = false
 run = ['layout tiling', 'move-node-to-workspace O']
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
 if.during-aerospace-startup = true
+check-further-callbacks = false
 run = ['layout tiling', 'move-node-to-workspace O']
