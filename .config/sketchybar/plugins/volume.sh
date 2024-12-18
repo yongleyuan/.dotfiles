@@ -18,6 +18,6 @@ if [ "$SENDER" = "volume_change" ]; then
       ;;
   esac
 
-  $BAR_NAME --set "$NAME" icon="$ICON" label="$VOLUME%"
+  $BAR_NAME --set "$NAME" icon="$ICON" # label="$VOLUME%"
 fi
 

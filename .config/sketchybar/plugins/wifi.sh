@@ -16,6 +16,5 @@ else
 fi
 
 $BAR_NAME --set $NAME \
-                icon=$ICON \
-                label=$WIFI
+                icon=$ICON
 
