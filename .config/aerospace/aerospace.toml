@@ -88,7 +88,7 @@ alt-shift-5 = 'move-node-to-workspace 5'
 alt-f = 'layout floating tiling'
 alt-shift-f = 'macos-native-fullscreen'
 alt-d = 'macos-native-minimize'
-alt-z = 'fullscreen --no-outer-gaps'
+alt-z = 'fullscreen'
 alt-r = 'flatten-workspace-tree'
 
 alt-tab = 'workspace-back-and-forth'

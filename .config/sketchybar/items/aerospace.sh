@@ -4,6 +4,7 @@ $BAR_NAME --add item aerospace.label left \
 	  --set aerospace.label \
                 icon="" \
                 icon.font.size=15 \
+                icon.padding_right=0 \
                 icon.color="0xff$LAVENDER" \
                 label.drawing=off
 
@@ -14,8 +15,8 @@ for sid in ${sids1[@]}; do
             --set aerospace.$sid \
                   background.padding_right=10 \
                   icon.drawing=off \
-                  padding_left=4 \
-                  padding_right=4 \
+                  padding_left=0 \
+                  padding_right=0 \
                   label="$sid" \
                   label.padding_left=8 \
                   label.padding_right=8 \
