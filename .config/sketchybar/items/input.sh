@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-$BAR_NAME --add event input_change "AppleSelectedInputSourcesChangedNotification"
 $BAR_NAME --subscribe input input_change \
           --set input \
                 padding_left=0 \

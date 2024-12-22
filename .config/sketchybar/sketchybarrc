@@ -10,6 +10,7 @@ $BAR_NAME --bar position=top height=36 blur_radius=30 color="0xaf$BASE" notch_wi
 
 # Register events
 $BAR_NAME --add event aerospace_workspace_change
+$BAR_NAME --add event input_change "AppleSelectedInputSourcesChangedNotification"
 
 # -- LEFT --
 
