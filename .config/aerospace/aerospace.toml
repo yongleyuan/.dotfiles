@@ -108,7 +108,7 @@ alt-l = ['join-with right', 'mode main']
 
 [mode.apps.binding]
 esc = ['mode main']
-t = ['exec-and-forget open -a /Applications/iTerm.app/', 'mode main']
+t = ['exec-and-forget open -a /Applications/Ghostty.app/', 'mode main']
 s = ['exec-and-forget open -a /Applications/Safari.app/', 'mode main']
 w = ['exec-and-forget open -a /Applications/WeChat.app/', 'mode main']
 o = ['exec-and-forget open -a /Applications/Orion.app/', 'mode main']
