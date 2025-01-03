@@ -3,7 +3,7 @@
 --------------------
 
 -- Keymap for reloading hs config
-hs.hotkey.bind({ "alt", "ctrl", "cmd" }, "H", function()
+hs.hotkey.bind({ "alt", "ctrl", "cmd" }, "R", function()
 	hs.reload()
 end)
 hs.alert.show("Reloaded config")
@@ -21,6 +21,8 @@ local vim = VimMode:new()
 vim:disableForApp("Code")
 vim:disableForApp("zoom.us")
 vim:disableForApp("iTerm")
+vim:disableForApp("Ghostty")
+vim:disableForApp("Terminal")
 
 -- Enter VimMode
 vim:bindHotKeys({ enter = { { "ctrl" }, "'" } })
